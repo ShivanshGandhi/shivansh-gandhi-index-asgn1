@@ -1,0 +1,910 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 6%;
+  background-color: black;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 50vw;
+}
+.right {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 15%;
+}
+.intro {
+  background-color: azure;
+}
+.left {
+  font-size: 1.25rem;
+}
+.cover,
+.back_cover {
+  height: 60vh;
+  width: 20vw;
+  background-color: rgb(33, 34, 105);
+  border-radius: 2px 20px 20px 2px;
+  position: absolute;
+  transform: rotateX(10deg);
+  transform-origin: center left;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px gray;
+}
+
+.right:hover .cover {
+  z-index: 2;
+  transition-duration: 2s;
+  transform: rotateX(10deg) rotateY(-180deg);
+}
+.cover:hover .cover-text {
+  opacity: 0;
+  visibility: hidden;
+}
+.cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boo{
+  font-size: 2rem;
+  transform: rotateX(10deg) rotateY(-180deg);
+}
+
+.cover-text {
+  opacity: 1;
+  transition-delay: 1.2s;
+  text-align: center;
+  height: auto;
+  width: auto;
+  color: rgba(255, 193, 77, 0.784);
+}
+.right:hover .page {
+  opacity: 1;
+  z-index: 2;
+  transition-duration: 2s;
+  transition-timing-function:ease-in;
+  transform: rotateX(10deg) rotateY(-180deg);
+}
+
+.cover,
+.back_cover,
+.page,
+.last-page{
+  position: absolute;
+}
+.cover,
+.back_cover,
+.last-page,
+.last-page-part {
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+}
+.cover {
+  z-index: 2;
+}
+.book_store{
+  width: 19vw;
+  height: 30vh;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  z-index: 1.9;
+  opacity: 0.9;
+  
+}
+.hea {
+  font-weight: bolder;
+  font-size: 2rem;
+  text-align: center;
+  padding: 6vh;
+}
+.last-page {
+  height: 58vh;
+  width: 19.5vw;
+  position: absolute;
+  background-color: rgba(255, 193, 77, 0.784);
+  border-radius: 2px 20px 20px 2px;
+  z-index: 1;
+}
+.page {
+  height: 58vh;
+  width: 19.5vw;
+  border-radius: 2px 20px 20px 2px;
+  position: absolute;
+  transform: rotateX(10deg);
+  transform-origin: center left;
+  background-color: rgba(255, 193, 77, 0.784);
+  opacity: 0;
+  transition-duration: 2s;
+}
+.last-page-part {
+  width: 18vw;
+  text-align: center;
+}
+@media screen and (max-width:1000px) {
+  body{
+    font-size: 0.5rem;
+  }
+  .page,.last-page{
+    width: 19vw;
+    height: 29vh;
+
+  }
+  .last-page h2{
+    font-size: xx-small;
+  }
+  .cover,.back_cover{
+    width: 20vw;
+    height: 30vh;
+  }
+  .boo{
+    font-size: 1rem;
+  }
+  .book_store{
+    width: 19vw;
+    height: 16vh;
+  }
+  .hea{
+    font-size: 1rem;
+  }
+  
+}
+.img_logo{
+  padding-right: 10%;
+  width: 5vw;
+}
+.bookc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo_name{
+  font-family: sans-serif;
+  text-align: center;
+}
+.nav_items {
+  padding: 0 6%;
+}
+#img {
+  padding: 0% 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.bt {
+  margin: 2%;
+  text-decoration: none;
+  background-color: white;
+  color: white;
+  border-radius: 8px;
+  float: right;
+  position: sticky;
+  bottom: 0; 
+}
+.btn{
+  padding: 3%;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+}
+.btn:hover{
+  width: 5vw;
+  border-radius:100px;
+}
+.reck{
+  height: 20vh;
+}
+.intro {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+}
+.last-page-part h2 {
+  font-size: 2rem;
+}
+#intro,
+#recommended,
+#best_selling,
+#rev{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 5%;
+  box-shadow: 4% grey;
+  border: 1px solid rgb(153, 100, 1);
+  margin-top: 0.5%;
+  height: 35vh;
+  padding: 0 1%;
+}
+#intro,#rev,
+#best_selling,
+#recommended {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+.sample_book1,
+.sample1_book2,
+.sample1_book3,
+.sample2_book1,
+.sample2_book2,
+.sample2_book3,
+.sample3_book1,
+.sample3_book2,
+.sample3_book3,
+.sample4_book1,
+.sample4_book2,
+.sample4_book3,
+.sample5_book1,
+.sample5_book2,
+.sample5_book3,
+.sample6_book1,
+.sample6_book2,
+.sample6_book3,
+.sample7_book1,
+.sample7_book2,
+.sample7_book3,
+.sample8_book1,
+.sample8_book2,
+.sample8_book3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10%;
+  width: 10vw;
+  height: 10vh;
+  text-align: center;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition-duration: 1s;
+  font-size: 0.75rem;
+}
+.sample1_book2:hover,
+.sample1_book3:hover,
+.sample2_book1:hover,
+.sample2_book2:hover,
+.sample2_book3:hover,
+.sample3_book1:hover,
+.sample3_book2:hover,
+.sample3_book3:hover,
+.sample4_book1:hover,
+.sample4_book2:hover,
+.sample4_book3:hover,
+.sample_book1:hover,
+.sample5_book1:hover,
+.sample5_book2:hover,
+.sample5_book3:hover,
+.sample6_book1:hover,
+.sample6_book2:hover,
+.sample6_book3:hover,
+.sample7_book1:hover,
+.sample7_book2:hover,
+.sample7_book3:hover,
+.sample8_book1:hover,
+.sample8_book2:hover,
+.sample8_book3:hover{
+  font-size: 1rem;
+  transition-duration: 2s;
+}
+.sample_book1 {
+  height: 11vh;
+  background-color: rgb(44, 43, 43);
+  color: white;
+}
+.sample1_book2 {
+  background-color: darkorange;
+  color: powderblue;
+  height: 10.5vh;
+}
+.sample1_book3 {
+  background-color: wheat;
+  color: black;
+  height: 9vh;
+}
+.sample2_book1 {
+  background-color: beige;
+  height: 10.2vh;
+}
+.sample2_book2 {
+  background-color: rgb(129, 64, 249);
+  color: white;
+  height: 11.2vh;
+}
+.sample2_book3 {
+  background-color: rgb(0, 100, 66);
+  color: rgb(250, 233, 145);
+  height: 12vh;
+}
+.sample3_book1 {
+  background-color: antiquewhite;
+  height: 11vh;
+}
+.sample3_book2 {
+  background-color: #005555;
+  color: white;
+  height: 7vh;
+}
+.sample3_book3 {
+  background-color: brown;
+  color: white;
+  height: 9.5vh;
+}
+.sample4_book1 {
+  background-color: black;
+  color: white;
+  height: 9.75vh;
+}
+.sample4_book2 {
+  background-color: rgb(33, 34, 105);
+  color: wheat;
+  height: 11vh;
+}
+.sample4_book3 {
+  background-color: lightcoral;
+  height: 10.5vh;
+}
+.sample5_book1 {
+  background-color: bisque;
+  color: goldenrod;
+  height: 12vh;
+}
+.sample5_book2 {
+  background-color: violet;
+  height: 10.5vh;
+}
+.sample5_book3 {
+  background-color: orangered;
+  color: white;
+  height: 9.5vh;
+}
+.sample6_book1 {
+  background-color: darkmagenta;
+  height: 9vh;
+}
+.sample6_book2 {
+  background-color: darkgrey;
+  height: 11.2vh;
+}
+.sample6_book3 {
+  background-color: darkred;
+  color: yellow;
+  height: 11.75vh;
+}
+.sample7_book1 {
+  background-color: darkgray;
+  height: 7vh;
+}
+.sample7_book2 {
+  background-color: aquamarine;
+  height: 10.25vh;
+}
+.sample7_book3 {
+  background-color: blanchedalmond;
+  height: 12vh;
+}
+.sample8_book1 {
+  background-color: darkcyan;
+  height: 8vh;
+}
+.sample8_book2 {
+  background-color: greenyellow;
+  height: 11vh;
+}
+.sample8_book3 {
+  background-color: blueviolet;
+  color: white;
+  height: 9vh;
+}
+#recommended {
+  background-color: bisque;
+}
+#best_selling {
+  background-color: rgb(238, 190, 190);
+}
+.books_side {
+  padding: 0 0.5%;
+}
+.img {
+  cursor: pointer;
+}
+a:hover {
+  color: rgb(238, 131, 149);
+}
+.nav_items {
+  color: white;
+  transition-duration: 1s;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.nav_items:hover {
+  transition-duration: 1s;
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+.recom,
+.best {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  height: 40vh;
+}
+.b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+  height: 80vh;
+  width: 32vw;
+  border: 2px solid black;
+  border-radius: 15% 0 15% 0;
+}
+.img:hover {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  height: 60vh;
+}
+.heading{
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+  font-size: 3rem;
+  padding: 4%;
+}
+.sub_heading{
+  text-align: center;
+  padding: 4%;
+  font-size: 2rem;
+}
+.main_text{
+  text-align: center;
+  padding: 4%;
+  font-size: 1.5rem;
+}
+.quote{
+  font-weight: bold;
+  font-family: cursive;
+  text-align: center;
+  padding: 4%;
+  font-size: 2rem;
+}
+.re{
+  text-align: center;
+}
+#rev{
+  background-color: rgb(216, 255, 215);
+}
+#review{
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+.r,
+.i,
+.be {
+  text-align: center;
+  padding: 5%;
+}
+.b1{
+  background-color: rgb(197, 241, 203);
+}
+.b2{
+  background-color: rgb(225, 225, 225);
+}
+.b3{
+  background-color: rgb(246, 222, 162);
+}
+.b4{
+  background-color: beige;
+}
+.b5{
+  background-color: rgb(253, 201, 201);
+}
+.book1_text,
+.book1_text1,
+.book2_text1,
+.book2_text,
+.book3_text1,
+.book3_text,
+.book4_text1,
+.book4_text,
+.book5_text1,
+.book5_text {
+  padding: 0 2%;
+  text-align: center;
+  width: 27vw;
+}
+.book {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.book1_about,
+.focus {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  background-color: azure;
+  opacity: 0;
+  visibility: hidden;
+}
+.book1_price {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: beige;
+  left: 65vw;
+  right: 8vw;
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+.b:hover ~ .focus {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+.b1:hover ~ .book1_text .book1_about {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+.b1:hover ~ .book1_text .book1_price {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.book1_text,
+.book2_text,
+.book3_text,
+.book4_text,
+.book5_text {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.book2_about {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  background-color: azure;
+  opacity: 0;
+  visibility: hidden;
+}
+.book2_price {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: beige;
+  left: 65vw;
+  right: 8vw;
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+
+.b2:hover ~ .book2_text .book2_about {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+.b2:hover ~ .book2_text .book2_price {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.book3_about {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  background-color: azure;
+  opacity: 0;
+  visibility: hidden;
+}
+.book3_price {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: beige;
+  left: 65vw;
+  right: 8vw;
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+
+.b3:hover ~ .book3_text .book3_about {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+.b3:hover ~ .book3_text .book3_price {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.book4_about {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  background-color: azure;
+  opacity: 0;
+  visibility: hidden;
+}
+.book4_price {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: beige;
+  left: 65vw;
+  right: 8vw;
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+
+.b4:hover ~ .book4_text .book4_about {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+.b4:hover ~ .book4_text .book4_price {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.book5_about {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  background-color: azure;
+  opacity: 0;
+  visibility: hidden;
+}
+.book5_price {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: beige;
+  left: 65vw;
+  right: 8vw;
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+
+.b5:hover ~ .book5_text .book5_about {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+.b5:hover ~ .book5_text .book5_price {
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.know {
+  align-self: flex-end;
+}
+.review1,.review2{
+  display: flex;
+  padding: 2%;
+}
+.re1,.re2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2%;
+}
+.heart,.like{
+  cursor: pointer;
+  transition-duration: 1s;
+  width: 2vw;
+}
+.heart:hover,.like:hover{
+  transition-duration: 1s;
+  width: 2.5vw;
+}
+.person{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.reaction{
+  display: flex;
+}
+.react{
+  margin:0 0.5%;
+  width: 3vw;
+  align-self: center;
+}
+.review_text{
+  padding: 2% 0;
+}
+footer{
+  padding: 2%;
+  background-color: black;
+  color: white;
+}
+.link3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.follow{
+  font-weight: bold;
+  text-decoration: underline;
+  padding-bottom: 2%;
+  text-shadow: 2px gray;
+}
+.links{
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+}
+.meta,.insta,.twitter{
+  cursor: pointer;
+  padding: 5%;
+}
+.meta_img,.insta_img,.twitter_img{
+  width:2vw;
+  border-radius: 50%;
+}
+.head{
+  padding: 4% 0;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.form{
+  background-color: goldenrod;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+}
+.fname,.fmail,.fno,.review{
+  margin:2% 10% ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  border-radius: 2% 0 2% 0;
+  box-shadow: 20% grey;
+}
+.submit{
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 15% 0 15% 0;
+  border:0.25% white solid ;
+  box-shadow: 4% grey;
+  cursor: pointer;
+  box-shadow: 10% grey;
+}
+.book1_text1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-around;
+}
+.book1_text1 img{
+  cursor: pointer;
+  width: 5vw;
+}
+.buynow,.cart{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sc,.buy{
+  cursor: pointer;
+  width: 10vw;
+  background-color: orange;
+  color: white;
+  border-radius: 20% 0 20% 0;
+  
+}
+.book2_about,.book3_about,.book1_about,.book4_about,.book5_about{
+  font-size: 1.5rem;
+  text-align: center;
+}
+h3{
+  padding: 5%;
+  font-size: 2rem;
+}
+.author{
+  font-size: 2rem;
+  padding: 3%;
+  text-align: center;
+  font-family: monospace;
+  font-weight: bolder;
+}
+.rating{
+  font-size: 1.5rem;
+  padding: 3%;
+  text-align: center;
+}
+.price,.discount,.final_price{
+  padding: 3%;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.fiction,.paperback{
+  padding: 3%;
+  font-size: 1.4rem;
+  text-align: center;
+  font-family: monospace;
+}
+.book1_about,.book2_about,.book3_about,.book4_about,.book5_about{
+  height: 75vh;
+}
+.bestS{
+  margin: 2%;
+  width: 20vw;
+  height: 10vh;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border-radius: 20% 0 20% 0;
+}
